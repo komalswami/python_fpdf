@@ -35,13 +35,15 @@ data = [['First name','Last name','Age','City'],
 ]
 ``` 
 ### Document title centered, 'B'old, 14 pt
-``
+```
 pdf.set_font('Times','B',14.0) 
 pdf.cell(epw, 0.0, 'Demographic data', align='C')
 pdf.set_font('Times','',10.0) 
 pdf.ln(0.5)
 ``` 
-### Text height is the same as current font size
+
+* Text height is the same as current font size
+
 ```
 th = pdf.font_size
  
@@ -72,7 +74,5 @@ for row in data:
         pdf.cell(col_width, 2*th, str(datum), border=1)
  
     pdf.ln(2*th)
-```
-``` 
 pdf.output('table-using-cell-borders.pdf','F')
 ```
